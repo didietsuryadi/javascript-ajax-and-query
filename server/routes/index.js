@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var controller = require('../controllers/colorController')
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+/* GET color. */
+router.get('/color', controller.changeColor);
 
 module.exports = router;
